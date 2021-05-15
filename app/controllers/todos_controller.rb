@@ -36,9 +36,9 @@ class TodosController < ApplicationController
     @todo.destroy
     flash[:notice] = "Todo deleted successfully"
     redirect_to todos_path
- end
+end
 
- private
+private
     def todo_params
         params.require(:todo).permit(:name,:description)
     end
